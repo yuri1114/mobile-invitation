@@ -12,7 +12,7 @@ window.onload = function () {
   // 지도 초기화
   const mapContainer = document.getElementById("map"); // 지도를 표시할 div
   const mapOption = {
-    center: new kakao.maps.LatLng(37.5355, 127.0944), // 강변 웨딩스퀘어의 좌표
+    center: new kakao.maps.LatLng(37.53573445785757, 127.0956967726977), // 강변 웨딩스퀘어의 좌표
     level: 3, // 지도의 확대 레벨
   };
 
@@ -20,7 +20,10 @@ window.onload = function () {
   const map = new kakao.maps.Map(mapContainer, mapOption);
 
   // 마커 추가
-  const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667); // 마커의 위치
+  const markerPosition = new kakao.maps.LatLng(
+    37.53573445785757,
+    127.0956967726977
+  ); // 마커의 위치
   const marker = new kakao.maps.Marker({
     position: markerPosition,
   });
