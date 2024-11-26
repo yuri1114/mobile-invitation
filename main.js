@@ -8,31 +8,31 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// window.onload = function () {
-//   // 지도 초기화
-//   const mapContainer = document.getElementById("map"); // 지도를 표시할 div
-//   const mapOption = {
-//     center: new kakao.maps.LatLng(37.5355, 127.0944), // 강변 웨딩스퀘어의 좌표
-//     level: 3, // 지도의 확대 레벨
-//   };
+window.onload = function () {
+  // 지도 초기화
+  const mapContainer = document.getElementById("map"); // 지도를 표시할 div
+  const mapOption = {
+    center: new kakao.maps.LatLng(37.5355, 127.0944), // 강변 웨딩스퀘어의 좌표
+    level: 3, // 지도의 확대 레벨
+  };
 
-//   // 지도 생성
-//   const map = new kakao.maps.Map(mapContainer, mapOption);
+  // 지도 생성
+  const map = new kakao.maps.Map(mapContainer, mapOption);
 
-//   // 마커 추가
-//   const markerPosition = new kakao.maps.LatLng(37.5355, 127.0944); // 마커의 위치
-//   const marker = new kakao.maps.Marker({
-//     position: markerPosition,
-//   });
-//   marker.setMap(map);
+  // 마커 추가
+  const markerPosition = new kakao.maps.LatLng(37.5355, 127.0944); // 마커의 위치
+  const marker = new kakao.maps.Marker({
+    position: markerPosition,
+  });
+  marker.setMap(map);
 
-//   // 인포윈도우 추가 (강변 웨딩스퀘어 정보)
-//   const infowindow = new kakao.maps.InfoWindow({
-//     content:
-//       '<div style="padding:5px; font-size:14px;">강변 웨딩스퀘어<br>3층 루시드홀</div>',
-//   });
-//   infowindow.open(map, marker);
-// };
+  // 인포윈도우 추가 (강변 웨딩스퀘어 정보)
+  const infowindow = new kakao.maps.InfoWindow({
+    content:
+      '<div style="padding:5px; font-size:14px;">강변 웨딩스퀘어<br>3층 루시드홀</div>',
+  });
+  infowindow.open(map, marker);
+};
 
 //계좌번호
 document.getElementById("chang").addEventListener("click", function (e) {
