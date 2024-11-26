@@ -22,6 +22,13 @@
     url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.ttf)
       format("truetype");
 }
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   display: flex;
@@ -70,7 +77,7 @@ body {
 }
 
 .area-2 {
-  padding: 3.125rem 0;
+  padding: 3.125rem 0 6.25rem;
   text-align: center;
 }
 
@@ -120,29 +127,8 @@ h3 {
   font-size: 1.25rem;
   text-align: center;
   margin-bottom: 0.625rem;
-}
-
-.num {
-  text-align: center;
-}
-
-.fake-swiper {
-  width: 100%;
-  margin-top: 1.25rem;
-  z-index: 2;
-  padding: 0 0.625rem;
-}
-
-.fake-swiper-wrapper,
-.fake-swiper-slide {
-  width: 100%;
-  height: 100%;
-}
-
-.fake-swiper-slide img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  font-family: "NanumSquareNeoLight";
+  color: #e9ae23;
 }
 
 .modal {
@@ -179,32 +165,30 @@ h3 {
   font-size: 1.5625rem;
 }
 
-.show-modal {
+.show {
   display: block;
 }
 
 .swiper {
   width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 
 .swiper-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: calc(100% - 3.125rem);
 }
-.swiper-wrapper .swiper-slide {
-  width: 100%;
-  height: 100%;
+
+.swiper-slide {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: white;
+  align-items: center;
+  width: 100% !important;
+  height: auto;
 }
+
 .swiper-wrapper .swiper-slide img {
-  width: 100%;
+  width: 100% !important;
   height: -moz-fit-content;
   height: fit-content;
   -o-object-fit: contain;
@@ -212,4 +196,100 @@ h3 {
 }
 body.modal-open {
   overflow: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: orange;
+  height: 1.875rem !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: orange;
+  font-size: 1.5625rem;
+}
+
+.swiper-pagination {
+  bottom: 0;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: orange;
+}
+
+.more {
+  text-align: center;
+}
+
+#parents {
+  margin-top: 4.375rem;
+  padding: 1.25rem;
+}
+
+#parents p {
+  font-family: "NanumSquareNeoLight";
+  text-align: center;
+
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
+.map-location {
+  margin-top: 3.125rem;
+}
+
+.account {
+  width: 100%;
+  border: 1px solid #594d30;
+  margin-top: 1.875rem;
+  border-radius: 10px;
+}
+
+.title-top {
+  width: 100%;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chang-detail {
+  display: none;
+  padding: 0 1.25rem 0.625rem;
+}
+
+#detail p {
+  text-align: left !important;
+}
+.chang .name {
+  color: #453ebb;
+}
+
+.yuri .name {
+  color: #fc540d;
+}
+
+.bank {
+  font-size: 0.875rem;
+}
+
+.yuri-detail {
+  display: none;
+  padding: 0 1.25rem 0.625rem;
+}
+
+.show-detail {
+  display: block;
+}
+button.copied {
+  background-color: #4caf50;
+  color: white;
 }

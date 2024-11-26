@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>창근♡유리 결혼식에 초대합니다!</title>
 
-    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7f1c7e1c9aa803d7d0f2ccf63e7b6599"
+    ></script>
   </head>
 
   <body>
     <div id="container-wrap">
       <div class="inner-wrap">
         <div class="area-1">
-          <img src="/img/img01.jpg" alt="" />
+          <img src="/img/img01.png" alt="" />
 
           <p class="invite-title">
             유리 ♡ 창근<br />
@@ -47,14 +52,117 @@
         </div>
 
         <section id="album">
-          <h3>album</h3>
-
-          <p class="num">1/10</p>
-          <div class="fake-swiper">
-            <div class="fake-swiper-wrapper">
-              <div class="fake-swiper-slide">
-                <img src="img/img02.jpg" alt="" />
+          <h3>갤러리</h3>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/img01.png" alt="" />
               </div>
+              <div class="swiper-slide">
+                <img src="img/img02.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img03.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img04.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img05.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img06.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img07.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img08.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img09.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img10.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <section class="map-location">
+          <h3>오시는 길</h3>
+
+          <div id="map" style="width: 100%; height: 400px"></div>
+        </section>
+
+        <section id="parents">
+          <h3>마음을 전하시는 곳</h3>
+          <p>
+            멀리서도 축하의 마음을<br />
+            전하고 싶으신 분들을 위해<br />
+            계좌번호를 안내드립니다.
+          </p>
+
+          <div class="account chang" id="chang">
+            <div class="title-top">
+              <p class="name">신랑측</p>
+              <p class="arrow">▼</p>
+            </div>
+
+            <div id="detail" class="chang-detail">
+              <div class="row">
+                <p class="bank">
+                  하나은행 163 891310 24107 <span>장기순(민숙)</span>
+                </p>
+
+                <button>복사</button>
+              </div>
+
+              <div class="row">
+                <p class="bank">
+                  하나은행 199 910188 63707 <span>김광철</span>
+                </p>
+
+                <button>복사</button>
+              </div>
+
+              <div class="row">
+                <p class="bank">
+                  기업은행 034 091804 01 017 <span>김창근</span>
+                </p>
+
+                <button>복사</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="account yuri">
+            <div class="title-top title-yuri" id="yuri">
+              <p class="name">신부측</p>
+              <p class="arrow">▼</p>
+            </div>
+
+            <div class="yuri-detail">
+              <div class="row">
+                <p class="bank">
+                  우리은행 505 019437 12 001 <span>김현아</span>
+                </p>
+
+                <button>복사</button>
+              </div>
+
+              <div class="row">
+                <p class="bank">
+                  카카오뱅크 3333 01 277 5156 <span>장유리</span>
+                </p>
+
+                <button>복사</button>
+              </div>
+
+              <p class="bank"></p>
             </div>
           </div>
         </section>
@@ -65,28 +173,22 @@
       <div class="top-close-btn">
         <button id="close-btn">X</button>
       </div>
-      <div class="photo-wrap">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <!-- JavaScript에서 이미지 슬라이드가 추가됩니다 -->
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
+      <div class="photo-wrap"></div>
     </div>
 
     <!-- Swiper JS -->
     <script type="module">
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-      // Swiper 초기화
       const swiper = new Swiper(".mySwiper", {
-        loop: true, // 루프 설정
-
+        loof: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
         },
       });
     </script>
