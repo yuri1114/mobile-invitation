@@ -1,7 +1,6 @@
 //스크롤바 내리면 area-2 애니메이션 시작.
 window.addEventListener("scroll", function () {
   if (window.scrollY >= 500) {
-    console.log(window.scrollY);
     document.querySelector(".area-2").style.transform = "translateY(50px)";
     document.querySelector(".area-2").style.transition = "all 1.5s";
   } else if (window.scrollY < 100) {
