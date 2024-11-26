@@ -30,6 +30,7 @@ body {
   justify-content: center;
   width: 100%;
   min-width: 17.5rem;
+  padding-bottom: 100px;
 }
 
 .inner-wrap {
@@ -215,7 +216,7 @@ body.modal-open {
   padding: 1.25rem;
 }
 
-#parents p {
+#parents .desc {
   font-family: "SUIT-Regular";
   text-align: center;
 
@@ -244,9 +245,13 @@ body.modal-open {
 
 .row {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-bottom: 0.5px solid #ededed;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.row:last-child {
+  border-bottom: 0;
 }
 .chang-detail {
   display: none;
@@ -258,19 +263,26 @@ body.modal-open {
 }
 .chang .name {
   color: #453ebb;
+  font-family: "SUIT-Regular";
+  font-weight: 600;
 }
 
 .yuri .name {
   color: #fc540d;
+  font-family: "SUIT-Regular";
+  font-weight: 600;
 }
 
 .bank {
-  font-size: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "SUIT-Regular";
 }
 
 .yuri-detail {
   display: none;
   padding: 0 1.25rem 0.625rem;
+  text-align: left !important;
 }
 
 .show-detail {
@@ -279,4 +291,12 @@ body.modal-open {
 button.copied {
   background-color: #4caf50;
   color: white;
+}
+
+button {
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  background: #ededed;
+  margin-left: 10px;
 }
