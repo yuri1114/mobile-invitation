@@ -16,6 +16,10 @@
   <body>
     <div id="container-wrap">
       <div class="inner-wrap">
+        <div class="gradient-div">
+          <p class="top-date">25.01.04</p>
+          <p class="top-day">SATURDAY</p>
+        </div>
         <div class="area-1">
           <img src="img/img01.png" alt="" />
 
@@ -42,7 +46,7 @@
 
           <div class="area-3">
             <p class="wedding-date">2025년 1월 4일 토요일 11시</p>
-            <p class="locate">강변 웨딩스퀘어 3층 루시드홀</p>
+            <p class="locate">강변 웨딩스퀘어 3층, 루시드홀</p>
           </div>
         </div>
 
@@ -90,7 +94,25 @@
         <section class="map-location">
           <h3 style="margin-bottom: 20px">오시는 길</h3>
 
-          <div id="map" style="width: 100%; height: 400px"></div>
+          <div id="map" style="width: 100%; height: 300px"></div>
+
+          <div class="text-area">
+            <h4>지하철</h4>
+            <p class="location-desc">
+              2호선 강변역 하차(테크노마트 판매동 방향)
+            </p>
+
+            <h4>자가용</h4>
+            <p class="location-desc">
+              네비게이션 : 강변테크노마트 검색<br />강변 테크노마트 지하 주차장
+              이용
+            </p>
+
+            <h4>주소</h4>
+            <p class="location-desc">
+              서울특별시 광진구 광나루로56길 85 테크노마트 3층
+            </p>
+          </div>
         </section>
 
         <section id="parents">
@@ -112,7 +134,7 @@
                 <p class="name">
                   신랑 혼주 계좌 : 장기순(민숙) <button>복사</button>
                 </p>
-                <p>하나은행</p>
+                <p class="name">하나은행</p>
                 <p class="bank">163 891310 24107</p>
               </div>
 
@@ -120,13 +142,13 @@
                 <p class="name">
                   신랑 혼주 계좌 : 김광철 <button>복사</button>
                 </p>
-                <p>하나은행</p>
+                <p class="name">하나은행</p>
                 <p class="bank">199 910188 63707</p>
               </div>
 
               <div class="row">
                 <p class="name">신랑 계좌 : 김창근 <button>복사</button></p>
-                <p>기업은행</p>
+                <p class="name">기업은행</p>
                 <p class="bank">034 091804 01 017</p>
               </div>
             </div>
@@ -143,18 +165,74 @@
                 <p class="name">
                   신부 혼주 계좌 : 김현아 <button>복사</button>
                 </p>
-                <p>우리은행</p>
+                <p class="name">우리은행</p>
                 <p class="bank">505 019437 12 001</p>
               </div>
 
               <div class="row">
                 <p class="name">신부 계좌 : 장유리 <button>복사</button></p>
-                <p>카카오뱅크</p>
+                <p class="name">카카오뱅크</p>
                 <p class="bank">3333 01 277 5156</p>
               </div>
             </div>
           </div>
         </section>
+
+        <div class="calendar-wrap">
+          <div class="calendar">
+            <div class="month-name sunday">2025년 1월</div>
+            <div class="days-of-week">
+              <div class="day sunday">일</div>
+              <div class="day">월</div>
+              <div class="day">화</div>
+              <div class="day">수</div>
+              <div class="day">목</div>
+              <div class="day">금</div>
+              <div class="day saturday">토</div>
+            </div>
+            <div class="dates">
+              <div class="date"></div>
+              <div class="date"></div>
+              <div class="date"></div>
+              <div class="date">1</div>
+              <div class="date">2</div>
+              <div class="date">3</div>
+              <div class="date saturday circle">4</div>
+              <div class="date sunday">5</div>
+              <div class="date">6</div>
+              <div class="date">7</div>
+              <div class="date">8</div>
+              <div class="date">9</div>
+              <div class="date">10</div>
+              <div class="date">11</div>
+              <div class="date sunday">12</div>
+              <div class="date">13</div>
+              <div class="date">14</div>
+              <div class="date">15</div>
+              <div class="date">16</div>
+              <div class="date">17</div>
+              <div class="date">18</div>
+              <div class="date sunday">19</div>
+              <div class="date">20</div>
+              <div class="date">21</div>
+              <div class="date">22</div>
+              <div class="date">23</div>
+              <div class="date">24</div>
+              <div class="date">25</div>
+              <div class="date sunday">26</div>
+              <div class="date">27</div>
+              <div class="date">28</div>
+              <div class="date">29</div>
+              <div class="date">30</div>
+              <div class="date">31</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="counter">
+          <p class="counter-title">창근♡유리 결혼식이</p>
+          <p class="counter-date" id="d-day-counter">Loading...</p>
+        </div>
       </div>
     </div>
 

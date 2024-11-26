@@ -13,19 +13,50 @@
 }
 
 @font-face {
-  font-family: "NanumSquareNeo";
-  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
-      format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
-      format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
-      format("truetype");
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
   display: flex;
   justify-content: center;
+}
+
+.inner-wrap {
+  position: relative;
+}
+.gradient-div {
+  width: 100%;
+  height: 12.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.top-date {
+  color: #49413a;
+  text-align: center;
+  padding-top: 3.125rem;
+
+  font-size: 1.875rem;
+}
+
+.top-day {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  color: #49413a;
 }
 
 #container-wrap {
@@ -54,13 +85,13 @@ body {
 
 .invite-title {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   /* transform: translateX(-50%); */
   font-size: 3.75rem;
   text-align: center;
   font-family: "BMkkubulimTTF-Regular";
-  color: orange;
+  color: #f79e9e;
   width: 100%;
   opacity: 0;
   animation: fadeUp 2s ease-in-out forwards;
@@ -87,8 +118,8 @@ body {
   font-size: 1rem;
   line-height: 1.6875rem;
   font-weight: 600;
-  font-family: "NanumSquareNeo";
-  color: #474343;
+  font-family: "GowunDodum-Regular";
+  color: #726d6d;
 }
 
 .area-3 {
@@ -100,13 +131,16 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 2.375rem;
-  font-family: "NanumSquareNeo";
+  font-family: "GowunDodum-Regular";
+  color: #49413a;
 }
 
 .locate {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
-  font-family: "NanumSquareNeo";
+  line-height: 1.5625rem;
+  font-family: "GowunDodum-Regular";
+  color: #49413a;
 }
 
 #album {
@@ -117,8 +151,8 @@ h3 {
   font-size: 1.25rem;
   text-align: center;
   margin-bottom: 0.625rem;
-  font-family: "NanumSquareNeo";
-  color: orange;
+  font-family: "GowunDodum-Regular";
+  color: #f79e9e;
 }
 
 .modal {
@@ -190,13 +224,13 @@ body.modal-open {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: orange;
+  color: #f79e9e;
   height: 1.875rem !important;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  color: orange;
+  color: #f79e9e;
   font-size: 1.5625rem;
 }
 
@@ -206,7 +240,7 @@ body.modal-open {
 }
 
 .swiper-pagination-bullet-active {
-  background: orange;
+  background: #f79e9e;
 }
 
 .more {
@@ -219,11 +253,12 @@ body.modal-open {
 }
 
 #parents .desc {
-  font-family: "NanumSquareNeo";
+  font-family: "GowunDodum-Regular";
   text-align: center;
 
   font-weight: 600;
   line-height: 1.75rem;
+  color: #89857e;
 }
 
 .map-location {
@@ -264,21 +299,22 @@ body.modal-open {
   text-align: left !important;
 }
 .chang .name {
-  color: #7568fe;
-  font-family: "NanumSquareNeo";
+  color: #585858;
+  font-family: "GowunDodum-Regular";
   font-weight: 600;
 }
 
 .yuri .name {
-  color: #fb6d6d;
-  font-family: "NanumSquareNeo";
+  color: #585858;
+  font-family: "GowunDodum-Regular";
   font-weight: 600;
 }
 
 .bank {
   font-size: 1rem;
   font-weight: 600;
-  font-family: "NanumSquareNeo";
+  font-family: "GowunDodum-Regular";
+  color: #544f4f;
 }
 
 .yuri-detail {
@@ -306,4 +342,99 @@ button {
 
 .arrow {
   color: #89857e;
+}
+
+h4 {
+  color: #f79e9e;
+  margin-bottom: 5px;
+  font-family: "GowunDodum-Regular";
+}
+
+.location-desc {
+  color: #585858;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  font-family: "GowunDodum-Regular";
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.text-area {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* 전체 달력 스타일 */
+.calendar {
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 1rem;
+  font-family: "GowunDodum-Regular";
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.month-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+  margin-top: 1rem;
+}
+
+/* 요일 스타일 */
+.days-of-week {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.day {
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  color: #585858;
+}
+
+/* 날짜 스타일 */
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.date {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  color: #585858;
+  border-radius: 5px;
+}
+
+.saturday.circle {
+  background-color: #f79e9e;
+  color: white;
+}
+.sunday {
+  color: #f79e9e; /* 일요일 색상 */
+}
+.counter {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.counter-title {
+  font-size: 1rem;
+  color: #585858;
+  font-family: "GowunDodum-Regular";
+}
+.counter-date {
+  font-size: 1rem;
+  color: #f79e9e;
+  width: 100%;
+  font-family: "GowunDodum-Regular";
 }

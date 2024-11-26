@@ -75,3 +75,31 @@ document.querySelectorAll(".row button").forEach((button) => {
     setTimeout(() => this.classList.remove("copied"), 2000);
   });
 });
+
+function updateDdayCounter() {
+  const today = new Date();
+  const targetDate = new Date("2025-01-04"); // 목표 날짜
+
+  // 현재 날짜와 목표 날짜 사이의 시간 차이 계산 (밀리초)
+  const timeDifference = targetDate - today;
+
+  // 밀리초를 일수로 변환
+  const daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  // 남은 일수를 HTML에 업데이트
+  const dDayElement = document.getElementById("d-day-counter");
+  if (daysLeft > 0) {
+    dDayElement.textContent = `${daysLeft}일 남았습니다.`;
+  } else if (daysLeft === 0) {
+    dDayElement.textContent = "오늘입니다!";
+  } else {
+    const daysPassed = Math.abs(daysLeft); // 경과된 일수
+    dDayElement.textContent = `이미 지나갔습니다. ${daysPassed}일 경과`;
+  }
+}
+
+// 페이지 로드 시 카운터 업데이트
+updateDdayCounter();
+
+// 매일 업데이트하기 위해 24시간마다 카운터 갱신
+setInterval(updateDdayCounter, 1000 * 60 * 60 * 24);
