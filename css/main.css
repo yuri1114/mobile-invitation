@@ -58,15 +58,11 @@ body {
   object-fit: cover;
 }
 
-.up {
-  top: 100px;
-}
-
 .invite-title {
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   font-size: 3.75rem;
   text-align: center;
   font-family: "BMkkubulimTTF-Regular";
@@ -74,6 +70,17 @@ body {
   width: 100%;
   opacity: 0;
   animation: fadeUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, calc(-50% - 100px));
+  }
 }
 
 .area-2 {
@@ -106,17 +113,6 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   font-family: "NanumSquareNeoLight";
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, calc(-50% - 100px));
-  }
 }
 
 #album {

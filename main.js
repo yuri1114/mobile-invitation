@@ -4,7 +4,7 @@ window.addEventListener("scroll", function () {
     document.querySelector(".area-2").style.transform = "translateY(50px)";
     document.querySelector(".area-2").style.transition = "all 1.5s";
   } else if (window.scrollY < 100) {
-    document.querySelector(".area-2").style.transform = "translateY(0)";
+    // document.querySelector(".area-2").style.transform = "translateY(0)";
   }
 });
 
