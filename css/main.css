@@ -157,13 +157,13 @@ h3 {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   background: #fff0d4;
 }
 
 .swiper-wrapper {
   width: 100% !important;
-  height: 80vh;
+  height: 100%;
 }
 
 .swiper-slide {
