@@ -10,9 +10,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
+
   <body>
     <div id="container-wrap">
       <div class="inner-wrap">
@@ -25,76 +25,57 @@
           </p>
         </div>
 
-        <div class="img-map">
-          <div class="thumbnail">
-            <img src="img/img02.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img03.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img04.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img05.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img06.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img07.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img08.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="img/img09.jpg" alt="" />
+        <div class="area-2">
+          <p class="info">
+            20대를 함께 해온 두 사람이<br />이제 부부라는 이름으로 새로운 시작을
+            하려 합니다.
+          </p>
+
+          <p class="info">
+            모든 날, 모든 순간을 아름답게 만들어가고<br />이끌어주고, 서로
+            응원해 주는 서로가 되겠습니다.
+          </p>
+
+          <p class="info">
+            새로 시작하는 이 자리에 오셔서 <br />축복해 주시면감사하겠습니다.
+          </p>
+
+          <div class="area-3">
+            <p class="wedding-date">2025년 1월 4일 토요일 11시</p>
+            <p class="locate">강변 웨딩스퀘어 3층 루시드홀</p>
           </div>
         </div>
 
+        <section id="album">
+          <h3>album</h3>
+
+          <p class="num">1/10</p>
+          <div class="fake-swiper">
+            <div class="fake-swiper-wrapper">
+              <div class="fake-swiper-slide">
+                <img src="img/img02.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="top-close-btn">
+        <button id="close-btn">X</button>
+      </div>
+      <div class="photo-wrap">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/img02.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img03.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img04.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img05.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img06.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img07.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img08.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img09.jpg" alt="" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="img/img10.jpg" alt="" />
-            </div>
+            <!-- JavaScript에서 이미지 슬라이드가 추가됩니다 -->
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
       </div>
     </div>
+
     <!-- Swiper JS -->
     <script type="module">
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
@@ -102,12 +83,14 @@
       // Swiper 초기화
       const swiper = new Swiper(".mySwiper", {
         loop: true, // 루프 설정
-        effect: "fade",
+
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
       });
     </script>
+
+    <script src="main.js"></script>
   </body>
 </html>

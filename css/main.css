@@ -6,10 +6,23 @@
 
 @font-face {
   font-family: "BMkkubulimTTF-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "NanumSquareNeoLight";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.ttf)
+      format("truetype");
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -35,7 +48,7 @@ body {
   width: 100%;
   height: 100dvh;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .up {
@@ -56,6 +69,38 @@ body {
   animation: fadeUp 2s ease-in-out forwards;
 }
 
+.area-2 {
+  padding: 3.125rem 0;
+  text-align: center;
+}
+
+.area-2 .info {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6875rem;
+  font-weight: 600;
+  font-family: "NanumSquareNeoLight";
+  color: #474343;
+}
+
+.area-3 {
+  text-align: center;
+  padding-top: 1.25rem;
+}
+
+.wedding-date {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+  font-family: "NanumSquareNeoLight";
+}
+
+.locate {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "NanumSquareNeoLight";
+}
+
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -66,21 +111,84 @@ body {
     transform: translate(-50%, calc(-50% - 100px));
   }
 }
-.img-map {
-  padding: 0.625rem;
+
+#album {
+  margin-top: 3.125rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 0.625rem;
+}
+
+.num {
+  text-align: center;
+}
+
+.fake-swiper {
+  width: 100%;
+  margin-top: 1.25rem;
+  z-index: 2;
+  padding: 0 0.625rem;
+}
+
+.fake-swiper-wrapper,
+.fake-swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.fake-swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.top-close-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.photo-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 }
-.img-map img {
-  width: 33.33%;
-  height: 33.33%;
+#close-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  font-size: 1.5625rem;
+}
+
+.show-modal {
+  display: block;
 }
 
 .swiper {
   width: 100%;
-  height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-wrapper {
@@ -100,15 +208,8 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
-
-.swiper-button-next:after {
-  content: "next";
-  color: orange;
-}
-
-.swiper-button-prev:after {
-  content: "next";
-  color: orange;
+body.modal-open {
+  overflow: hidden;
 }
