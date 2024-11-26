@@ -367,7 +367,7 @@ h4 {
 .calendar {
   width: 100%;
   margin: 40px auto;
-  padding: 0 1rem;
+  padding: 0 10px;
   font-family: "GowunDodum-Regular";
   font-size: 0.875rem;
   text-align: center;
@@ -389,7 +389,7 @@ h4 {
 }
 
 .day {
-  width: 40px;
+  width: 35px;
   height: 30px;
   line-height: 30px;
   color: #585858;
@@ -399,11 +399,14 @@ h4 {
 .dates {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  text-align: center;
 }
 
 .date {
-  width: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   line-height: 40px;
   background-color: #fff;
