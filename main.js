@@ -20,7 +20,7 @@ window.onload = function () {
   const map = new kakao.maps.Map(mapContainer, mapOption);
 
   // 마커 추가
-  const markerPosition = new kakao.maps.LatLng(37.53595, 127.09509); // 마커의 위치
+  const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667); // 마커의 위치
   const marker = new kakao.maps.Marker({
     position: markerPosition,
   });
