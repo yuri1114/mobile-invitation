@@ -89,7 +89,7 @@ function updateDdayCounter() {
   // 남은 일수를 HTML에 업데이트
   const dDayElement = document.getElementById("d-day-counter");
   if (daysLeft > 0) {
-    dDayElement.textContent = `${daysLeft}일 남았습니다.`;
+    dDayElement.textContent = `${daysLeft + 1}일 남았습니다.`;
   } else if (daysLeft === 0) {
     dDayElement.textContent = "오늘입니다!";
   } else {
