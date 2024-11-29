@@ -77,11 +77,22 @@ document.querySelectorAll(".row button").forEach((button) => {
 });
 
 function updateDdayCounter() {
-  const today = new Date();
-  const targetDate = new Date("2025-01-04"); // 목표 날짜
+  // 현재 한국 시간으로 날짜 계산
+  const nowUTC = new Date(); // UTC 기준 현재 시간
+  const offsetKST = 9 * 60 * 60 * 1000; // KST는 UTC+9이므로 9시간 추가
+  const todayKST = new Date(nowUTC.getTime() + offsetKST); // 한국 표준시로 변환
+
+  // 한국 시간 기준 자정 설정 (시간, 분, 초를 0으로 설정)
+  const todayMidnightKST = new Date(
+    todayKST.getFullYear(),
+    todayKST.getMonth(),
+    todayKST.getDate()
+  );
+
+  const targetDate = new Date("2025-01-04T00:00:00+09:00"); // 목표 날짜 (KST 기준)
 
   // 현재 날짜와 목표 날짜 사이의 시간 차이 계산 (밀리초)
-  const timeDifference = targetDate - today;
+  const timeDifference = targetDate - todayMidnightKST;
 
   // 밀리초를 일수로 변환
   const daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -89,17 +100,17 @@ function updateDdayCounter() {
   // 남은 일수를 HTML에 업데이트
   const dDayElement = document.getElementById("d-day-counter");
   if (daysLeft > 0) {
-    dDayElement.textContent = `${daysLeft + 1}일 남았습니다.`;
+    dDayElement.textContent = `${daysLeft}일 남았습니다.`;
   } else if (daysLeft === 0) {
     dDayElement.textContent = "오늘입니다!";
   } else {
     const daysPassed = Math.abs(daysLeft); // 경과된 일수
-    dDayElement.textContent = `이미 지나갔습니다. ${daysPassed}일 경과`;
+    dDayElement.textContent = `결혼 한지 ${daysPassed}일 입니다!`;
   }
 }
 
 // 페이지 로드 시 카운터 업데이트
 updateDdayCounter();
 
-// 매일 업데이트하기 위해 24시간마다 카운터 갱신
-setInterval(updateDdayCounter, 1000 * 60 * 60 * 24);
+// 매일 자정에 정확히 업데이트하기 위해 1초 간격으로 확인
+setInterval(updateDdayCounter, 1000);
