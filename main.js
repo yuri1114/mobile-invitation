@@ -76,41 +76,44 @@ document.querySelectorAll(".row button").forEach((button) => {
   });
 });
 
-function updateDdayCounter() {
-  // 현재 한국 시간으로 날짜 계산
-  const nowUTC = new Date(); // UTC 기준 현재 시간
-  const offsetKST = 9 * 60 * 60 * 1000; // KST는 UTC+9이므로 9시간 추가
-  const todayKST = new Date(nowUTC.getTime() + offsetKST); // 한국 표준시로 변환
+function calculateDday() {
+  // 목표 날짜 설정 (KST 기준)
+  const targetDate = new Date("2025-01-04T00:00:00+09:00");
 
-  // 한국 시간 기준 자정 설정 (시간, 분, 초를 0으로 설정)
+  // 현재 시간을 UTC로 가져온 뒤 KST로 변환
+  const nowUTC = new Date();
+  const offsetKST = 9 * 60 * 60 * 1000; // UTC+9
+  const nowKST = new Date(nowUTC.getTime() + offsetKST);
+
+  // 오늘 자정 기준 현재 날짜 (KST)
   const todayMidnightKST = new Date(
-    todayKST.getFullYear(),
-    todayKST.getMonth(),
-    todayKST.getDate()
+    nowKST.getFullYear(),
+    nowKST.getMonth(),
+    nowKST.getDate(),
+    0,
+    0,
+    0 // 시간을 자정으로 고정
   );
 
-  const targetDate = new Date("2025-01-04T00:00:00+09:00"); // 목표 날짜 (KST 기준)
-
-  // 현재 날짜와 목표 날짜 사이의 시간 차이 계산 (밀리초)
+  // 목표 날짜와 오늘 자정 기준 차이 계산
   const timeDifference = targetDate - todayMidnightKST;
 
-  // 밀리초를 일수로 변환
-  const daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  // 밀리초를 일 단위로 변환
+  const daysLeft = timeDifference / (1000 * 60 * 60 * 24);
 
-  // 남은 일수를 HTML에 업데이트
+  // 결과 반영 (남은 날짜 반올림 처리)
   const dDayElement = document.getElementById("d-day-counter");
   if (daysLeft > 0) {
-    dDayElement.textContent = `${daysLeft}일 남았습니다.`;
+    dDayElement.textContent = `D-${Math.ceil(daysLeft) + 1}`; // 자정을 기준으로 계산
   } else if (daysLeft === 0) {
-    dDayElement.textContent = "오늘입니다!";
+    dDayElement.textContent = "D-Day!";
   } else {
-    const daysPassed = Math.abs(daysLeft); // 경과된 일수
-    dDayElement.textContent = `결혼 한지 ${daysPassed}일 입니다!`;
+    dDayElement.textContent = `D+${Math.abs(Math.ceil(daysLeft))}`;
   }
 }
 
-// 페이지 로드 시 카운터 업데이트
-updateDdayCounter();
+// 페이지 로드 시 디데이 계산
+calculateDday();
 
-// 매일 자정에 정확히 업데이트하기 위해 1초 간격으로 확인
-setInterval(updateDdayCounter, 1000);
+// 1초마다 디데이 업데이트
+setInterval(calculateDday, 1000);
